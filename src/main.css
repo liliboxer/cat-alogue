@@ -103,3 +103,19 @@ button:hover {
     background-color: rgb(235, 216, 181);
     color: black;
 }
+
+.bottom-form-container {
+    display: flex;
+    justify-content: space-between
+}
+
+.message-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+#message {
+    width: 100px;
+    text-align: right;
+    font-size: 15px;
+}
