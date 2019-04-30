@@ -1,5 +1,26 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 1000px;
+    margin: 0 auto;
 }
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-child{
+    width: 350px;
+}
+
+.info-child-right{
+    text-align: right;
+}
+
+.info-child p {
+    padding: 0 20px;
+}
+
+
