@@ -1,4 +1,4 @@
-import getEntry from '../src/get-entry.js';
+import makeEntry from '../src/get-entry.js';
 
 const test = QUnit.test;
 
@@ -33,7 +33,7 @@ test('puts applicant form into object', function(assert) {
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const applicant = getEntry(formData);
+    const applicant = makeEntry(formData);
 
     //Assert
     assert.deepEqual(expected, applicant);
