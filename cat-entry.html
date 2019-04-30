@@ -14,7 +14,38 @@
         </h1>
     </header>
 
-    <form id="cat-entry"></form>
+    <form id="cat-entry">
+        <section>
+            <h2 class="entry-section">General Info: </h2>
+
+            <p>
+                <label for="name">Name: </label>
+                <input type="text" name="name">
+            </p>
+
+            <p>
+                <label for="owner">Owner's Name: </label>
+                <input type="text" name="owner">
+            </p>
+        </section>
+
+        <section>
+            <h2 class="entry-section">Appearance: </h2>
+
+            <fieldset>
+                <label for="type">What tpe of cat is your kitty?</label>
+                <select id="type" name="type" required>
+                    <option value="" hidden disabled selected>Please choose a type</option>
+                    <option value="calico">Calico</option>
+                    <option value="solid">Solid</option>
+                    <option value="tabby">Tabby</option>
+                    <option value="tortoiseshell">Tortoiseshell</option>
+                </select>
+            </fieldset>
+
+        </section>
+
+    </form>
     
 </body>
 </html>
