@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,21 +10,35 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    font-family: 'Shadows Into Light Two';
+    font-size: 8em;
+    margin: 0;
+}
+
+h2 {
+    font-family: Satisfy;
+    margin: 50px auto 30px auto;
+}
+
+h3 {
+    font-family: 'Shadows Into Light Two';
+}
+
 .information {
     display: flex;
     justify-content: space-between;
+    width: 600px;
 }
 
-.info-child{
-    width: 350px;
+.info-left {
+    width: 300px;
 }
 
-.info-child-right{
+.info-right {
+    width: 200px;
     text-align: right;
 }
 
-.info-child p {
-    padding: 0 20px;
-}
 
 
