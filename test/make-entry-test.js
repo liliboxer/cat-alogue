@@ -1,6 +1,7 @@
 import makeEntry from '../src/make-entry.js';
 
 const test = QUnit.test;
+QUnit.module('make-entry');
 
 test('puts applicant form into object', function(assert) {
     //Arrange

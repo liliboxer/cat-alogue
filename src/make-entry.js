@@ -14,7 +14,7 @@ function makeEntry(formData) {
         indoor: indoor,
         biscuits: biscuits,
         love: formData.get('love')
-    }
+    };
 
     return applicant;
 

@@ -1,4 +1,4 @@
-import makeEntry from './src/make-entry.js';
+import makeEntry from './make-entry.js';
 
 const form = document.getElementById('cat-entry');
 const ageRange = document.getElementById('age');
