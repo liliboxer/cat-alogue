@@ -1,4 +1,5 @@
 import makeEntry from './make-entry.js';
+import catDetailApi from './cat-detail-api.js';
 
 const form = document.getElementById('cat-entry');
 const ageRange = document.getElementById('age');
@@ -15,5 +16,7 @@ form.addEventListener('submit', (event) => {
     const formData = new FormData(form);
     const applicant = makeEntry(formData);
     message.textContent = 'Your cat thanks for you for immortilizing it in catalogue form!';
-    console.log(applicant);
+    
+    catDetailApi.save(applicant);
+    
 });
