@@ -16,3 +16,17 @@ test('round trip for cat data', function(assert) {
     //Assert
     assert.deepEqual(result, applicant);
 });
+
+test('no cats in local storage returns empty aray', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    localStorage.removeItem('cats');
+    const expected = [];
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const cats = catDetailApi.getAll();
+
+    //Assert
+    assert.deepEqual(cats, expected);
+});

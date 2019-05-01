@@ -16,6 +16,9 @@ const catDetailApi = {
         const cats = JSON.parse(json);
         // return
         return cats[0];
+    },
+    getAll() {
+        return [];
     }
 };
 
