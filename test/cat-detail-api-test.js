@@ -5,6 +5,7 @@ QUnit.module('cat-detail-api');
 
 test('round trip for cat data', function(assert) {
     //Arrange
+    localStorage.removeItem('cats');
     const applicant = { name: 'Max' };
     
     //Act 
@@ -32,7 +33,7 @@ test('2 saves returns array with 2 items', function(assert) {
     localStorage.removeItem('cats');
     const cat1 = { name: 'kitty1' };
     const cat2 = { name: 'kitty2' };
-    
+
     const expected = [cat1, cat2];
     catDetailApi.save(cat1);
     catDetailApi.save(cat2);

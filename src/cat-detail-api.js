@@ -1,7 +1,8 @@
 const catDetailApi = {
     save(applicant) {
-        // create array with applicant
+        // get our cats array
         const cats = catDetailApi.getAll();
+        // add applicant to cats
         cats.push(applicant);
         // serialize to JSON
         const json = JSON.stringify(cats);
