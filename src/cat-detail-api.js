@@ -1,7 +1,7 @@
 const catDetailApi = {
     save(applicant) {
         // create array with applicant
-        const cats = [];
+        const cats = catDetailApi.getAll();
         cats.push(applicant);
         // serialize to JSON
         const json = JSON.stringify(cats);
@@ -10,15 +10,18 @@ const catDetailApi = {
     },
 
     get() {
-        // get from local storage
-        const json = localStorage.getItem('cats');
-        // parse 
-        const cats = JSON.parse(json);
+        // use get all to fetch cats
+        const cats = catDetailApi.getAll();
         // return
         return cats[0];
     },
     getAll() {
-        return [];
+        const json = localStorage.getItem('cats');
+        let cats = JSON.parse(json);
+        if(!cats) {
+            cats = [];
+        }
+        return cats;
     }
 };
 
