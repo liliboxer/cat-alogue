@@ -44,3 +44,18 @@ test('2 saves returns array with 2 items', function(assert) {
     //Assert
     assert.deepEqual(cats, expected);
 });
+
+test('save 2 applicants w/ diff names and save 2nd', function(assert) {
+    //Arrange
+    localStorage.removeItem('cats');
+    const applicant1 = { owner: 'name1' };
+    const applicant2 = { owner: 'name2' };
+   
+    //Act 
+    catDetailApi.save(applicant1);
+    catDetailApi.save(applicant2);
+    const result = catDetailApi.get(applicant2.owner);
+
+    //Assert
+    assert.deepEqual(result, applicant2);
+});

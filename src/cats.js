@@ -11,10 +11,14 @@ for(let i = 0; i < cats.length; i++) {
 
     const ownerCell = document.createElement('td');
     const link = document.createElement('a');
-    link.href = 'cat-detail.html?name=' + cat.owner;
-    ownerCell.appendChild(link);
+    
+    const searchParams = new URLSearchParams();
+    
+    searchParams.set('name', cat.owner);
+    link.href = 'cat-detail.html?name=' + searchParams.toString();
+    
     link.textContent = cat.owner;
-
+    ownerCell.appendChild(link);
     tr.appendChild(ownerCell);
     
     const nameCell = document.createElement('td');

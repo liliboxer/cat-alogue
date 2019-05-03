@@ -12,15 +12,13 @@ const indoor = document.getElementById('indoor');
 const biscuits = document.getElementById('biscuits');
 const love = document.getElementById('love');
 
+// get applicant name
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('owner');
+
 // get our applicant from the API
 
-const applicant = catDetailApi.get();
-
-// no applicant? head back to home page
-
-if(!applicant) {
-    window.location = './';
-}
+const applicant = catDetailApi.get(id);
 
 // mediate data into elements 
 
