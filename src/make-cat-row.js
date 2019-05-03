@@ -50,4 +50,11 @@ function makeColorCell(color) {
     return makeTextCell(colorList);
 }
 
-export default makeCatRow;
+const catRowMaker = {
+    makeTextCell: makeTextCell,
+    makeColorCell: makeColorCell,
+    makeOwnerCell: makeOwnerCell,
+    makeCatRow: makeCatRow
+}
+
+export default catRowMaker;
