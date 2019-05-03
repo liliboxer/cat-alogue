@@ -13,11 +13,7 @@ function makeCatRow(cat) {
     const typeCell = makeTextCell(cat.type);
     tr.appendChild(typeCell);
 
-    let colorList = '';
-    if(cat.color) {
-        colorList = cat.color.join(', ');
-    }
-    const colorCell = makeTextCell(colorList);
+    const colorCell = makeColorCell(cat.color);
     tr.appendChild(colorCell);
 
     const hairCell = makeTextCell(cat.hair);
@@ -51,6 +47,14 @@ function makeTextCell(text) {
     const cell = document.createElement('td');
     cell.textContent = text;
     return cell;
+}
+
+function makeColorCell(color) {
+    let colorList = '';
+    if(color) {
+        colorList = color.join(', ');
+    }
+    return makeTextCell(colorList);
 }
 
 export default makeCatRow;
