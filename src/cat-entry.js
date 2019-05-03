@@ -8,7 +8,6 @@ const message = document.getElementById('message');
 
 ageRange.addEventListener('change', () => {
     ageDisplay.textContent = ageRange.value;
-
 });
 
 form.addEventListener('submit', (event) => {
