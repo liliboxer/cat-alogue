@@ -21,13 +21,13 @@ const id = searchParams.get('owner');
 const applicant = catDetailApi.get(id);
 
 // mediate data into elements 
-console.log(id);
+console.log(applicant.color);
 
 owner.textContent = applicant.owner;
 name.textContent = applicant.name;
 age.textContent = applicant.age;
 type.textContent = applicant.type;
-color.textContent = applicant.color;
+color.textContent = applicant.color.join(', ');
 hair.textContent = applicant.hair;
 indoor.textContent = applicant.indoor;
 biscuits.textContent = applicant.biscuits;
