@@ -1,12 +1,40 @@
+import getEntry from '../src/get-entry.js';
+
 const test = QUnit.test;
 
-test('time to test a function', function(assert) {
+test('puts applicant form into object', function(assert) {
     //Arrange
     // Set up your parameters and expectations
 
+    const expected = {
+        owner: 'Lili',
+        name: 'Max',
+        age: 8,
+        type: 'calico',
+        color: ['ginger', 'white'],
+        hair: true,
+        indoor: true,
+        biscuits: true,
+        love: 'he is the fluffiest best!'
+    };
+
+    const formData = new FormData();
+    formData.set('owner', expected.owner);
+    formData.set('name', expected.name);
+    formData.set('age', '8');
+    formData.set('type', 'calico');
+    formData.set('color', expected.color[0]);
+    formData.append('color', expected.color[1]);
+    formData.set('hair', 'yes');
+    formData.set('indoor', 'yes');
+    formData.set('biscuits', 'yes');
+    formData.set('love', expected.love);
+
+
     //Act 
     // Call the function you're testing and set the result to a const
+    const applicant = getEntry(formData);
 
     //Assert
-    assert.equal(true, false);
+    assert.deepEqual(expected, applicant);
 });
