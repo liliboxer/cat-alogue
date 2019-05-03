@@ -4,9 +4,9 @@ const tbody = document.getElementById('cats');
 
 const cats = catDetailApi.getAll();
 
-for(let i = 0; i < cats.length; i++) {
-    const cat = cats[i];
 
+
+function makeCatRow(cat) {
     const tr = document.createElement('tr');
 
     const ownerCell = document.createElement('td');
@@ -16,7 +16,6 @@ for(let i = 0; i < cats.length; i++) {
     
     searchParams.set('owner', cat.owner);
     link.href = 'cat-detail.html?' + searchParams.toString();
-    console.log(searchParams.toString());
     
     link.textContent = cat.owner;
     ownerCell.appendChild(link);
@@ -41,7 +40,6 @@ for(let i = 0; i < cats.length; i++) {
     }
     colorCell.textContent = colorList;
     tr.appendChild(colorCell);
-    console.log('cat color', cat.color);
 
     const hairCell = document.createElement('td');
     hairCell.textContent = cat.hair;
@@ -54,6 +52,22 @@ for(let i = 0; i < cats.length; i++) {
     const biscuitsCell = document.createElement('td');
     biscuitsCell.textContent = cat.indoor;
     tr.appendChild(biscuitsCell);
+
+    return tr;
+}
+
+
+
+
+
+
+for(let i = 0; i < cats.length; i++) {
+    const cat = cats[i];
+
+    // input cats
+
+
+    // output tr 
 
     tbody.appendChild(tr);
 
