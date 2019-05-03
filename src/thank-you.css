@@ -1,3 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    padding: 30px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(235, 216, 181);
+}
+
 h1 {
     text-align: center;
+}
+
+img {
+    border-radius: 100%;
 }
