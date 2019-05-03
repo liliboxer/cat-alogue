@@ -10,7 +10,11 @@ for(let i = 0; i < cats.length; i++) {
     const tr = document.createElement('tr');
 
     const ownerCell = document.createElement('td');
-    ownerCell.textContent = cat.owner;
+    const link = document.createElement('a');
+    link.href = 'cat-detail.html?name=' + cat.owner;
+    ownerCell.appendChild(link);
+    link.textContent = cat.owner;
+
     tr.appendChild(ownerCell);
     
     const nameCell = document.createElement('td');
