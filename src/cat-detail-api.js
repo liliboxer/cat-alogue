@@ -19,6 +19,7 @@ const catDetailApi = {
             if(cat.owner === owner) {
                 return cat;
             }
+            
         }
     },
     getAll() {
