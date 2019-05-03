@@ -14,8 +14,9 @@ for(let i = 0; i < cats.length; i++) {
     
     const searchParams = new URLSearchParams();
     
-    searchParams.set('name', cat.owner);
-    link.href = 'cat-detail.html?name=' + searchParams.toString();
+    searchParams.set('owner', cat.owner);
+    link.href = 'cat-detail.html?' + searchParams.toString();
+    console.log(searchParams.toString());
     
     link.textContent = cat.owner;
     ownerCell.appendChild(link);
@@ -26,7 +27,7 @@ for(let i = 0; i < cats.length; i++) {
     tr.appendChild(nameCell);
 
     const ageCell = document.createElement('td');
-    ageCell.value = cat.age;
+    ageCell.textContent = cat.age;
     tr.appendChild(ageCell);
     
     const typeCell = document.createElement('td');

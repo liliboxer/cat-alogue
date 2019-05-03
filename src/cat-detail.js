@@ -21,6 +21,7 @@ const id = searchParams.get('owner');
 const applicant = catDetailApi.get(id);
 
 // mediate data into elements 
+console.log(id);
 
 owner.textContent = applicant.owner;
 name.textContent = applicant.name;
