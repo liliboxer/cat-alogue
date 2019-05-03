@@ -18,5 +18,7 @@ form.addEventListener('submit', (event) => {
     message.textContent = 'Your cat thanks for you for immortilizing it in catalogue form!';
     
     catDetailApi.save(applicant);
+
+    window.location = 'thank-you.html';
     
 });
