@@ -1,51 +1,56 @@
 function makeCatRow(cat) {
     const tr = document.createElement('tr');
 
+    const ownerCell = makeOwnerCell(cat.owner);
+    tr.appendChild(ownerCell);
+
+    const nameCell = makeTextCell(cat.name);
+    tr.appendChild(nameCell);
+    
+    const ageCell = makeTextCell(cat.age);
+    tr.appendChild(ageCell);
+    
+    const typeCell = makeTextCell(cat.type);
+    tr.appendChild(typeCell);
+
+    let colorList = '';
+    if(cat.color) {
+        colorList = cat.color.join(', ');
+    }
+    const colorCell = makeTextCell(colorList);
+    tr.appendChild(colorCell);
+
+    const hairCell = makeTextCell(cat.hair);
+    tr.appendChild(hairCell);
+
+    const indoorCell = makeTextCell(cat.indoor);
+    tr.appendChild(indoorCell);
+
+    const biscuitsCell = makeTextCell(cat.biscuits);
+    tr.appendChild(biscuitsCell);
+
+    return tr;
+}
+
+function makeOwnerCell(owner) {
     const ownerCell = document.createElement('td');
     const link = document.createElement('a');
     
     const searchParams = new URLSearchParams();
     
-    searchParams.set('owner', cat.owner);
+    searchParams.set('owner', owner);
     link.href = 'cat-detail.html?' + searchParams.toString();
     
-    link.textContent = cat.owner;
+    link.textContent = owner;
     ownerCell.appendChild(link);
-    tr.appendChild(ownerCell);
-    
-    const nameCell = document.createElement('td');
-    nameCell.textContent = cat.name;
-    tr.appendChild(nameCell);
 
-    const ageCell = document.createElement('td');
-    ageCell.textContent = cat.age;
-    tr.appendChild(ageCell);
-    
-    const typeCell = document.createElement('td');
-    typeCell.textContent = cat.type;
-    tr.appendChild(typeCell);
+    return ownerCell;
+}
 
-    const colorCell = document.createElement('td');
-    let colorList = '';
-    if(cat.color) {
-        colorList = cat.color.join(', ');
-    }
-    colorCell.textContent = colorList;
-    tr.appendChild(colorCell);
-
-    const hairCell = document.createElement('td');
-    hairCell.textContent = cat.hair;
-    tr.appendChild(hairCell);
-
-    const indoorCell = document.createElement('td');
-    indoorCell.textContent = cat.indoor;
-    tr.appendChild(indoorCell);
-
-    const biscuitsCell = document.createElement('td');
-    biscuitsCell.textContent = cat.indoor;
-    tr.appendChild(biscuitsCell);
-
-    return tr;
+function makeTextCell(text) {
+    const cell = document.createElement('td');
+    cell.textContent = text;
+    return cell;
 }
 
 export default makeCatRow;
