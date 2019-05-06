@@ -1,3 +1,7 @@
+h1 {
+    font-size: 100px;
+    padding-top: 20px;
+}
 
 dl {
     display: grid;
@@ -7,18 +11,16 @@ dl {
 
 dt, dd {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 20px;
     color: black;
+    margin: 0;
 }
 
 dt {
     background: rgb(235, 216, 181);
-    color: white;
+    font-weight: bolder;
+    color: black;
     text-align: right;
     padding-left: 30px;
     font-size: .95em;
-}
-
-dt:after {
-    content: ' :';
 }
