@@ -1,4 +1,4 @@
-function getEntry(formData) {
+function makeEntry(formData) {
     const age = parseInt(formData.get('age'));
     const hair = formData.get('hair') === 'yes';
     const indoor = formData.get('indoor') === 'yes';
@@ -14,9 +14,9 @@ function getEntry(formData) {
         indoor: indoor,
         biscuits: biscuits,
         love: formData.get('love')
-    }
+    };
 
     return applicant;
 
 }
-export default getEntry;
+export default makeEntry;

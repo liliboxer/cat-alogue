@@ -83,8 +83,14 @@ footer {
 }
 
 .info-right {
+    display: flex;
+    flex-direction: column;
     width: 200px;
     text-align: right;
+}
+
+.view-kitties {
+    margin-top: 30px;
 }
 
 .max{
